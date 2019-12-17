@@ -1,11 +1,12 @@
-;;; ob-elm.el --- org-babel functions for elm evaluation
+;;; ob-elm.el --- Org-babel functions for elm evaluation
 
 ;; Copyright (C) 2019 Bonface M. K.
 
 ;; Author: Bonface M. K.
-;; Keywords: literate programming, reproducible research
+;; Keywords: languages, literate programming, reproducible research
 ;; Homepage: https://www.bonfacemunyoki.com
 ;; Version: 0.01
+;; Package-Requires: ((emacs  "26.1"))
 
 ;;; License:
 
@@ -141,5 +142,7 @@ then create one.  Return the initialized session."
 			   &optional async subtreep visible-only body-only
 			   ext-plist post-process))
 
-(provide 'ob-template)
-;;; ob-template.el ends here
+;; lib
+
+(provide 'ob-elm)
+;;; ob-elm.el ends here
