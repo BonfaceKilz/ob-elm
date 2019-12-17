@@ -1,10 +1,10 @@
 ;;; ob-elm.el --- org-babel functions for elm evaluation
 
-;; Copyright (C) Bonface M. K.
+;; Copyright (C) 2019 Bonface M. K.
 
 ;; Author: Bonface M. K.
 ;; Keywords: literate programming, reproducible research
-;; Homepage: https://orgmode.org
+;; Homepage: https://www.bonfacemunyoki.com
 ;; Version: 0.01
 
 ;;; License:
