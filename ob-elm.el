@@ -35,9 +35,8 @@
 
 ;;; Code:
 (require 'ob)
-(require 'ob-ref)
-(require 'ob-comint)
-(require 'ob-eval)
+(require 'org-macs)
+(require 'comint)
 ;; possibly require modes required for your language
 
 ;; optionally define a file extension for this language
