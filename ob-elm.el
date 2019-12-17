@@ -37,10 +37,9 @@
 (require 'ob)
 (require 'org-macs)
 (require 'comint)
-;; possibly require modes required for your language
 
-;; optionally define a file extension for this language
-(add-to-list 'org-babel-tangle-lang-exts '("template" . "tmp"))
+(declare-function elm-mode "ext:elm-mode" ())
+(declare-function run-elm-interactive "ext:elm-mode" (&optional arg))
 
 ;; optionally declare default header arguments for this language
 (defvar org-babel-default-header-args:template '())
