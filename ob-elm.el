@@ -41,8 +41,15 @@
 (declare-function elm-mode "ext:elm-mode" ())
 (declare-function run-elm-interactive "ext:elm-mode" (&optional arg))
 
-;; optionally declare default header arguments for this language
-(defvar org-babel-default-header-args:template '())
+(defvar org-babel-default-header-args:elm
+  '((:padlines . "no")))
+
+(defvar org-babel-tangle-lang-exts)
+(add-to-list 'org-babel-tangle-lang-exts '("elm" . "elm"))
+
+(defvar org-babel-elm-eoe "\"org-babel-elm-eoe\"")
+
+(defvar elm-prompt-regexp)
 
 ;; This function expands the body of a source code block by doing
 ;; things like prepending argument definitions to the body, it should
