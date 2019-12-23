@@ -1,4 +1,4 @@
-;;; ob-elm.el --- org-babel functions for elm evaluation
+;;; ob-elm.el --- Org-babel functions for elm evaluation
 
 ;; Copyright (C) 2019 Bonface M. K.
 
@@ -6,6 +6,7 @@
 ;; Keywords: literate programming, reproducible research
 ;; Homepage: https://www.bonfacemunyoki.com
 ;; Version: 0.01
+;; Package-Requires: ((emacs  "26.1"))
 
 ;;; License:
 
@@ -53,8 +54,8 @@
 
 (defun org-babel-execute:elm (body params)
   "Execute a block of Elm code.
-Argument BODY The elm block to execute.
-Argument PARAMS The args passed to the header"
+BODY is the elm block to execute.
+PARAMS are the args passed to the src block header"
   (add-hook 'elm-mode-hook
             (lambda ()
               (setq-local comint-prompt-regexp
@@ -94,8 +95,7 @@ Argument PARAMS The args passed to the header"
 
 
 (defun org-babel-variable-assignments:elm (params)
-  "Return list of Elm statements assigning the block's variables.
-Argument PARAMS Variables passed in the header args."
+  "Return list of Elm statements assigning the block's PARAMS(variables)."
   (mapcar (lambda (pair)
 	    (format "let %s = %s"
 		    (car pair)
