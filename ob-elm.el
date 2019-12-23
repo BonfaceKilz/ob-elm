@@ -1,12 +1,11 @@
-;;; ob-elm.el --- Org-babel functions for elm evaluation
+;;; ob-elm.el --- org-babel functions for elm evaluation
 
 ;; Copyright (C) 2019 Bonface M. K.
 
 ;; Author: Bonface M. K.
-;; Keywords: languages, literate programming, reproducible research
+;; Keywords: literate programming, reproducible research
 ;; Homepage: https://www.bonfacemunyoki.com
 ;; Version: 0.01
-;; Package-Requires: ((emacs  "26.1"))
 
 ;;; License:
 
@@ -53,13 +52,15 @@
 (defvar elm-prompt-regexp)
 
 (defun org-babel-execute:elm (body params)
-  "Execute a block of Elm code."
+  "Execute a block of Elm code.
+Argument BODY The elm block to execute.
+Argument PARAMS The args passed to the header"
   (add-hook 'elm-mode-hook
             (lambda ()
               (setq-local comint-prompt-regexp
                           (concat elm-prompt-regexp "\\|^λ?> "))))
   (let* ((session (cdr (assq :session params)))
-         (result-type (cdr (assq :result-type params)))
+         (result-type (cdr (assq :result-type pThe header-args passed to the src block.arams)))
          (full-body (org-babel-expand-body:generic
 		     body params
 		     (org-babel-variable-assignments:elm params)))
@@ -93,7 +94,8 @@
 
 
 (defun org-babel-variable-assignments:elm (params)
-  "Return list of Elm statements assigning the block's variables."
+  "Return list of Elm statements assigning the block's variables.
+Argument PARAMS Variables passed in the header args."
   (mapcar (lambda (pair)
 	    (format "let %s = %s"
 		    (car pair)
@@ -142,7 +144,9 @@ then create one.  Return the initialized session."
 			   &optional async subtreep visible-only body-only
 			   ext-plist post-process))
 
-;; lib
+(provide 'ob-template)
+;;; ob-template.el ends here
 
 (provide 'ob-elm)
+
 ;;; ob-elm.el ends here
