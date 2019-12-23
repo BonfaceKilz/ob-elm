@@ -5,7 +5,7 @@ This is an Emacs library that allows Org mode to evaluate code blocks using the 
 
 ![Evaluating Elm](demo.gif)
 
-Add `(elm . t)` to your org-babel-do-load-languages`:
+Add `(elm . t)` to your `org-babel-do-load-languages`:
 
 ```
 (org-babel-do-load-languages
