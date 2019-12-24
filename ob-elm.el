@@ -1,4 +1,4 @@
-;;; ob-elm.el --- Org-babel functions for elm evaluation
+;;; ob-elm.el --- Org-babel functions for elm evaluation -*- lexical-binding: t; -*-
 
 ;; Copyright (C) 2019 Bonface M. K.
 
@@ -6,7 +6,7 @@
 ;; Keywords: literate programming, reproducible research
 ;; Homepage: https://www.bonfacemunyoki.com
 ;; Version: 0.01
-;; Package-Requires: ((emacs  "26.1"))
+;; Package-Requires: ((emacs  "26.1") (org "9.3"))
 
 ;;; License:
 
@@ -36,6 +36,7 @@
 
 ;;; Code:
 (require 'ob)
+(require 'org)
 (require 'org-macs)
 (require 'comint)
 
@@ -61,7 +62,7 @@ PARAMS are the args passed to the src block header"
               (setq-local comint-prompt-regexp
                           (concat elm-prompt-regexp "\\|^λ?> "))))
   (let* ((session (cdr (assq :session params)))
-         (result-type (cdr (assq :result-type pThe header-args passed to the src block.arams)))
+         (result-type (cdr (assq :result-type params)))
          (full-body (org-babel-expand-body:generic
 		     body params
 		     (org-babel-variable-assignments:elm params)))
