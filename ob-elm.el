@@ -1,6 +1,4 @@
-;; -*- lexical-binding: t -*-
-
-;;; ob-elm.el --- Org-babel functions for elm evaluation
+;;; ob-elm.el --- Org-babel functions for elm evaluation -*- lexical-binding: t; -*-
 
 ;; Copyright (C) 2019 Bonface M. K.
 
