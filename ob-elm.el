@@ -1,3 +1,5 @@
+;; -*- lexical-binding: t -*-
+
 ;;; ob-elm.el --- Org-babel functions for elm evaluation
 
 ;; Copyright (C) 2019 Bonface M. K.
@@ -61,7 +63,7 @@ PARAMS are the args passed to the src block header"
               (setq-local comint-prompt-regexp
                           (concat elm-prompt-regexp "\\|^λ?> "))))
   (let* ((session (cdr (assq :session params)))
-         (result-type (cdr (assq :result-type pThe header-args passed to the src block.arams)))
+         (result-type (cdr (assq :result-type params)))
          (full-body (org-babel-expand-body:generic
 		     body params
 		     (org-babel-variable-assignments:elm params)))
