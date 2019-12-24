@@ -3,7 +3,7 @@
 ;; Copyright (C) 2019 Bonface M. K.
 
 ;; Author: Bonface M. K.
-;; Keywords: literate programming, reproducible research
+;; Keywords: languages, tools
 ;; Homepage: https://www.bonfacemunyoki.com
 ;; Version: 0.01
 ;; Package-Requires: ((emacs  "26.1") (org "9.3"))
