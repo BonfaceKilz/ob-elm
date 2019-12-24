@@ -8,7 +8,7 @@
 ;; Keywords: literate programming, reproducible research
 ;; Homepage: https://www.bonfacemunyoki.com
 ;; Version: 0.01
-;; Package-Requires: ((emacs  "26.1"))
+;; Package-Requires: ((emacs  "26.1") (org "9.3"))
 
 ;;; License:
 
@@ -38,6 +38,7 @@
 
 ;;; Code:
 (require 'ob)
+(require 'org)
 (require 'org-macs)
 (require 'comint)
 
