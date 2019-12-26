@@ -145,9 +145,6 @@ then create one.  Return the initialized session."
 			   &optional async subtreep visible-only body-only
 			   ext-plist post-process))
 
-(provide 'ob-template)
-;;; ob-template.el ends here
-
 (provide 'ob-elm)
 
 ;;; ob-elm.el ends here
