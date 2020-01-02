@@ -57,10 +57,6 @@
   "Execute a block of Elm code.
 BODY is the elm block to execute.
 PARAMS are the args passed to the src block header"
-  (add-hook 'elm-mode-hook
-            (lambda ()
-              (setq-local comint-prompt-regexp
-                          (concat elm-prompt-regexp "\\|^λ?> "))))
   (let* ((session (cdr (assq :session params)))
          (result-type (cdr (assq :result-type params)))
          (full-body (org-babel-expand-body:generic
