@@ -2,7 +2,7 @@
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 [![MELPA](https://melpa.org/packages/ob-elm-badge.svg)](https://melpa.org/#/ob-elm)
 
-This is an Emacs library that adds `Org-Babel` support for evaluating [Elm](https://elm-lang.org/ "Elm") code. Use of `Elm > 0.90` is recommended.
+This is an Emacs library that adds `Org-Babel` support for evaluating [Elm](https://elm-lang.org/ "Elm") code. Use of `Elm > 0.19` is recommended.
 
 ![Evaluating Elm](demo.gif)
 
