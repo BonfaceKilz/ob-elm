@@ -32,7 +32,7 @@
 
 ;;; System Requirements:
 
-;; All you need is Elm >= 0.90 installed on your system
+;; All you need is Elm >= 0.19 installed on your system
 
 ;;; Code:
 (require 'ob)
